@@ -1,6 +1,7 @@
 FROM python:3.7.3-alpine
 
-RUN pip install pyyaml \
+RUN sudo apt-get install git \
+	&& pip install pyyaml \
     && pip install git+https://github.com/Microsoft/SparseSC \
 	&& curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
